@@ -1420,6 +1420,10 @@
 		<img src="https://ubg42.github.io/img/DrawClimber.jpg" alt="Draw Climber">
 		<h3>Draw Climber</h3>
 	</div>
+  <div class="game-card" onclick="openGame('blob:https://541584139-atari-embeds.googleusercontent.com/e8f634b9-4656-48c2-b3f9-7b72491f9759', 'Google Docs')">
+		<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRH0Rq0BnGG_YTd6e8MoPlnb3YCso1plnBUwQfWXnY6bA&s=10" alt="Granny">
+		<h3>Granny</h3>
+	</div>
 		<div class="game-card" onclick="openGame('https://ubg42.github.io/IdleStartupCompany/', 'Google Docs')">
 		<img src="https://ubg42.github.io/img/IdleStartupCompany.jpg" alt="Idle Startup Company">
 		<h3>Idle Startup Company</h3>
@@ -1718,6 +1722,7 @@ const normalize = (str) => str.trim().toLowerCase();
 const triggers = {
     "cj": [
       "the impossible quiz",
+	  "granny",
       "subway surfers",
       "stack",
       "run 3",
@@ -2422,6 +2427,7 @@ if (query === "gunblood") {
 	  "https://ubg42.github.io/Knockout4/",
 	  "https://ubg42.github.io/link",
 	  "https://ubg42.github.io/file/TheFraustrationGame.html"
+	  "blob:https://541584139-atari-embeds.googleusercontent.com/e8965ec3-8cb7-4959-b57d-72c02ceb2575"
     ];
 
     function openRandom() {
