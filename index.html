@@ -1662,26 +1662,27 @@
 		<img src="https://ubg42.github.io/img/BusSim3D.jpg" alt="Bus Simulator 3D">
 		<h3>Bus Simulator 3D</h3>
 	</div>
-	<div class="game-card" onclick="openGame('https://ubg42.github.io/file/TheFraustrationGame.html', 'Google Docs')">
+	    <div class="game-card" onclick="openGame('https://ubg42.github.io/file/TheFraustrationGame.html', 'Google Docs')">
 		<img src="https://ubg42.github.io/file/TheFraustrationGame.jpg" alt="The Fraustration Game">
 		<h3>The Fraustration Game</h3>
 	</div>	
+        <div class="game-card" onclick="openGame('blob:https://541584139-atari-embeds.googleusercontent.com/e8f634b9-4656-48c2-b3f9-7b72491f9759', 'Google Docs')">
+		<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRH0Rq0BnGG_YTd6e8MoPlnb3YCso1plnBUwQfWXnY6bA&s=10" alt="Granny">
+		<h3>Granny</h3>
+    </div>
 	</div>
 	<footer>
-  <p class="footer-text">Contact: ubg423@gmail.com 
+  <p class="footer-text">Contact: ubg67@gmail.com 
   </p>
-    <p class="footer-text">© 2026 All rights reserved.
+    <p class="footer-text">© 2026 no rights reserved.
   </p>
 <p class="footer-text">
   Play my Favourite Games: 
-  <a href="https://ubg42.github.io/creator" target="_blank" style="color: white; text-decoration: none;">
+  <a href="Fortnite" target="_blank" style="color: white; text-decoration: none;">
 	Creator Games
   </a>
 </p>
-<p class="rainbow-text">Luke</p>
-<p class="rainbow-text">Ashwer</p>
-<p class="rainbow-text">Bails</p>
-<p class="rainbow-text">Addison</p>
+<p class="rainbow-text">Lachlan+Liam💘</p>
 </footer>
 <script>
 function openGame(url, title) {
@@ -1707,277 +1708,23 @@ function openGame(url, title) {
 }
 </script>
 <script>
-const searchBar = document.getElementById("searchBar");
-const gameCards = document.querySelectorAll(".game-card");
-const body = document.body;
+// Highly optimized real-time search engine
+document.getElementById("searchBar").addEventListener("input", function (e) {
+  const query = e.target.value.trim().toLowerCase();
+  const gameCards = document.querySelectorAll(".game-card");
 
-const normalize = (str) => str.trim().toLowerCase();
-
-const triggers = {
-    "cj": [
-      "the impossible quiz",
-      "subway surfers",
-      "stack",
-      "run 3",
-      "watermelon drop",
-	  "project sekai - プロジェクトセカイ"
-    ],
-    "jm": [
-      "cluster rush",
-      "level devil - not a troll game",
-      "moto road rash 3d",
-      "slope",
-      "traffic run 3d",
-      "stack",
-      "ragdoll archers",
-      "shell jump",
-      "drift boss",
-      "the impossible quiz",
-      "house of harzards",
-      "stickman fight ragdoll",
-      "stick merge",
-      "deal or no deal",
-      "dreadhead parkour",
-      "cookie clicker",
-	  "slope with cheats",
-	  "stick fighter",
-	  "gobble",
-	  "timer shooter 3 swat",
-	  "grow your garden"	
-    ],
-    "jk": [
-      "cluster rush",
-      "level devil - not a troll game",
-      "moto road rash 3d",
-      "slope",
-      "traffic run 3d",
-      "stack",
-      "ragdoll archers",
-      "shell jump",
-      "drift boss",
-      "the impossible quiz",
-      "house of harzards",
-      "stickman fight ragdoll",
-      "stick merge",
-      "deal or no deal",
-      "dreadhead parkour",
-      "cookie clicker",
-	  "slope with cheats",
-	  "stick fighter",
-	  "gobble",
-	  "timer shooter 3 swat",
-	  "grow your garden"	
-    ],
-    "caylen and jaxton": [
-      "eggy car",
-      "retro bowl",
-      "idle mining empire"
-    ],
-	  "jaxton and caylen": [
-      "eggy car",
-      "retro bowl",
-      "idle mining empire"
-    ],
-    "hayden": [
-      "geometry dash",
-      "red ball 4"
-    ],
-    "jamessaysopensesame": [
-      "cookie clicker"
-    ],
-	 "campbell": [
-	   "subway surfers",
-		 "stick merge",
-	     "learn to fly",
-	     "learn to fly 2",
-	     "learn to fly 3",
-	     "learn to fly idle",
-		 "idle mining empire",
-		 "boost roulette"
-	],
-		 "corey": [
-	   "subway surfers",
-		 "stick merge",
-	     "learn to fly",
-	     "learn to fly 2",
-	     "learn to fly 3",
-	     "learn to fly idle",
-		 "idle mining empire",
-		 "boost roulette",
-		 "basket random"
-	],
-	   "the egg needs a seatbelt": [
-	   "eggy car"
-	],
-		"the egg needs a seatbelt!": [
-	   "eggy car"
-	],
-		 "creator": [
-	     "slope",
-		 "tomb of the mask",
-	     "moto x3m",
-	     "moto x3m spooky land",
-	     "moto x3m winter",
-	     "eggy car",
-		 "appel",
-		 "cluster rush",
-		 "dreadhead parkour",
-		 "run 3",
-		 "red ball 4",
-		 "drive mad",
-		 "stick fighter",
-		 "flip bros",
-		 "bacon may die",
-		 "gold miner",
-		 "gold miner: special edition",
-		 "soflowheelielife",
-		 "escape road 2",  
-		 "escape road", 
-		 "dune",
-		 "survival race"	 
-	],
-    	"bails": [
-	     "slope",
-		 "fluid simulation",
-	     "moto x3m",
-	     "moto x3m spooky land",
-	     "moto x3m winter",
-         "moto x3m pool party",
-         "moto x3m 2",
-         "moto x3m 3",
-	     "cars thief",
-		 "red ball 4",
-		 "highway traffic 3d",
-		 "dreadhead parkour",
-		 "drift hunters",
-         "worlds hardest game",
-		 "worlds hardest game 2",
-		 "worlds hardest game 3",
-		 "worlds hardest game 4",
-         "drive mad",
-         "top speed racing 3d",
-         "deal or no deal",
-         "slope with cheats",
-		 "slow roads",
-		 "escape road",
-		 "escape road 2",
-		 "level 67",
-		 "fly the plane",
-		 "wacky flip",
-		 "rooftop run",							
-	],
-	    "callum": [
-	     "ovo",
-		 "subway surfers",
-	     "gunspin"
-	],
-		"caleb": [
-	     "jacksmith"
-	],
-		"will": [
-	     "slope",
-		 "plants vs zombies",
-		 "eggy car"
-	],
-		 "ethan": [
-	     "water polo ragdoll",
-		 "4th and goal 2022"
-
-	],
-			 "millie": [
-	     "watermelon drop"
-	],
-			 "rocco": [
-         "papas pizzeria",
-         "papas bakeria",
-		 "papas pastaria",
-		 "plants vs zombies",
-		 "fifa fc 24",
-		 "clash royale"
-	],
-		 "asher": [
-         "gunspin",
-         "clash royale"
-	],
-		 "dustin": [
-         "super mx - the champion"
-	],
-		 "detrey": [
-         "eggy car",
-        "drive mad",
-        "traffic run 3d",
-        "rocket soccer derby",
-        "drift hunters",
-        "crazy cars",
-        "top speed racing 3d",
-        "monster tracks",
-        "parking fury",
-        "demolition derby crash racing",
-        "parking fury 3d beach city",
-        "ultimate car driving",
-        "blumgi rocket",
-        "polytrack",
-        "highway traffic 3d",
-        "survival karts",
-        "battle wheels",
-        "burnout extreme drift 2",
-        "burnout drift: seaport max"
-	],
-				 "chloe": [
-	     "boost roulette"
-	],
-		"tayton": [
-	     "bloons tower defense"
-	],
-			"mitchell": [
-         "retro bowl",
-         "crossy road",
-	],
-			"mitch": [
-         "retro bowl",
-         "crossy road",
-	],
-			"beth": [
-        "stickman bike",
-        "moto road rash 3d",
-        "slope",
-        "tunnel rush",
-        "8 ball pool",
-        "flappy bird",
-        "snow rider 3d",
-        "subway surfers",
-        "paper.io 2",
-        "stickman hook",
-        "ovo",
-        "run 3",
-        "tomb of the mask",
-		"stack"
-	],
-			    "liam": [
-        "geometry dash",
-		"geometry dash lite"
-	],
-				"Liam": [
-        "geometry dash",
-		"geometry dash lite"
-	],
-  };
-
+  gameCards.forEach((card) => {
+    const titleElement = card.querySelector("h3");
+    if (titleElement) {
+      const title = titleElement.textContent.toLowerCase();
+      // Instantly shows matching cards and hides the rest
+      card.style.setProperty('display', title.includes(query) ? '' : 'none', 'important');
+    }
+  });
+});
 const backgrounds = {
   default: 'url("galaxy.jpg")',
-  bails: 'url("yellow.jpg")',
-  jm: 'url("e.png")',
-  jk: 'url("e.png")',
   creator: 'url("red.png")',
-  will: 'url("ditto.png")',
-  cj: 'url("cj.png")',
- millie: 'url(Bakugo.jpg)',
- rocco: 'url(mega-night.jpg)',
- dawson: 'url(Bing-Bong.jpg)',
- asher: 'url(Fire-Spirit.png)',
- beth: 'url(jellyfish.png)',
- liam: 'url(sigmamale.png)',
- Liam: 'url(sigmamale.png)',
 };
 
 // Set default background
