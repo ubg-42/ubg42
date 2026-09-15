@@ -268,394 +268,114 @@
 </head>
 <body>
 <header>
-	 	
+
+	<!-- ========================================================== -->
+<!-- 🌌 MASTER CLASS AUTOMATED NAVIGATION BAR & CONTROL ENGINE  -->
 <!-- ========================================================== -->
-<!-- 🌌 THE ULTIMATE ZERO-MAINTENANCE PREMIUM NAVIGATION BAR     -->
-<!-- ========================================================== -->
-<div id="premiumNavbar" style="background: linear-gradient(135deg, #0062ff 0%, #0046c7 100%); padding: 14px 24px; display: flex; align-items: center; justify-content: flex-start; gap: 24px; flex-wrap: wrap; box-sizing: border-box; width: 100%; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; box-shadow: 0 4px 25px rgba(0, 98, 255, 0.25); border-bottom: 1px solid rgba(255,255,255,0.15); position: relative; z-index: 999999; transition: background 0.3s ease;">
+<div id="premiumNavbar" style="background: #0062ff; padding: 14px 24px; display: flex; align-items: center; justify-content: flex-start; gap: 24px; flex-wrap: wrap; box-sizing: border-box; width: 100%; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; box-shadow: 0 4px 25px rgba(0, 98, 255, 0.25); border-bottom: 1px solid rgba(255,255,255,0.15); position: relative; z-index: 999999; transition: background 0.3s ease;">
   
-  <!-- ⚙️ 1. Professional Settings Gear Component -->
+  <!-- ⚙️ Settings Toggle Component Menu -->
   <div style="position: relative; display: flex; align-items: center;">
-    <button onclick="toggleSettingsMenu()" id="settingsGearBtn" style="background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.2); color: white; border-radius: 50%; width: 42px; height: 42px; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 20px; transition: all 0.2s ease-in-out; outline: none; box-shadow: 0 2px 5px rgba(0,0,0,0.05);"
+    <button onclick="toggleSettingsMenu()" id="settingsGearBtn" style="background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.2); color: white; border-radius: 50%; width: 42px; height: 42px; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 20px; transition: all 0.2s ease-in-out; outline: none;"
             onmouseenter="this.style.background='rgba(255,255,255,0.25)'; this.style.transform='rotate(45deg)';"
             onmouseleave="this.style.background='rgba(255,255,255,0.12)'; this.style.transform='rotate(0deg)';">
       ⚙️
     </button>
     
-    <!-- Floating Settings Panel overlay -->
-    <div id="settingsPanel" style="display: none; position: absolute; top: calc(100% + 12px); left: 0; width: 260px; background: #ffffff; border-radius: 16px; box-shadow: 0 15px 35px rgba(0,0,0,0.2); border: 1px solid rgba(0,0,0,0.06); padding: 18px; color: #1e293b; box-sizing: border-box; transform-origin: top left; z-index: 1000002;">
+    <!-- Control Portal Floating Panel Grid Panel Container -->
+    <div id="settingsPanel" style="display: none; position: absolute; top: calc(100% + 12px); left: 0; width: 260px; background: #ffffff; border-radius: 16px; box-shadow: 0 15px 35px rgba(0,0,0,0.2); border: 1px solid rgba(0,0,0,0.06); padding: 18px; color: #1e293b; box-sizing: border-box; z-index: 1000002;">
       <h3 style="margin: 0 0 14px 0; font-size: 16px; font-weight: 700; color: #0f172a; border-bottom: 1px solid #f1f5f9; padding-bottom: 8px;">Control Panel</h3>
-      
-      <!-- Option A: Dark/Light Mode Theme Toggle -->
       <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px;">
         <span style="font-size: 14px; font-weight: 600;">Theme Palette</span>
-        <button onclick="toggleThemeSetting()" id="themeSettingBtn" style="background: #f1f5f9; border: 1px solid #cbd5e1; padding: 6px 12px; border-radius: 20px; font-size: 12px; font-weight: bold; cursor: pointer; color: #334155; transition: all 0.15s; min-width: 90px;">☀️ Light</button>
+        <button onclick="toggleThemeSetting()" id="themeSettingBtn" style="background: #f1f5f9; border: 1px solid #cbd5e1; padding: 6px 12px; border-radius: 20px; font-size: 12px; font-weight: bold; cursor: pointer; color: #334155; min-width: 90px; outline: none;">☀️ Light</button>
       </div>
-      
-      <!-- Option B: Web Audio Switch Toggle -->
       <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px;">
         <span style="font-size: 14px; font-weight: 600;">FX Audio</span>
-        <button onclick="toggleAudioSetting()" id="audioSettingBtn" style="background: #ecfdf5; border: 1px solid #a7f3d0; padding: 6px 12px; border-radius: 20px; font-size: 12px; font-weight: bold; cursor: pointer; color: #047857; transition: all 0.15s; min-width: 90px;">🔊 Sound On</button>
+        <button onclick="toggleAudioSetting()" id="audioSettingBtn" style="background: #ecfdf5; border: 1px solid #a7f3d0; padding: 6px 12px; border-radius: 20px; font-size: 12px; font-weight: bold; cursor: pointer; color: #047857; min-width: 90px; outline: none;">🔊 Sound On</button>
       </div>
-
-      <!-- Option C: Tab Cloak School Mode Toggle -->
       <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px;">
         <div style="display: flex; flex-direction: column;">
           <span style="font-size: 14px; font-weight: 600;">Tab Cloaking</span>
-          <span style="font-size: 10px; color: #64748b; font-weight: 500;">Disguise as Docs</span>
         </div>
-        <button onclick="toggleCloakSetting()" id="cloakSettingBtn" style="background: #f1f5f9; border: 1px solid #cbd5e1; padding: 6px 12px; border-radius: 20px; font-size: 12px; font-weight: bold; cursor: pointer; color: #334155; transition: all 0.15s; min-width: 90px;">❌ Disabled</button>
+        <button onclick="toggleCloakSetting()" id="cloakSettingBtn" style="background: #f1f5f9; border: 1px solid #cbd5e1; padding: 6px 12px; border-radius: 20px; font-size: 12px; font-weight: bold; cursor: pointer; color: #334155; min-width: 90px; outline: none;">❌ Disabled</button>
       </div>
-
-      <!-- Option D: Brand Color Accents Preset Quick Config -->
       <div style="margin-bottom: 5px;">
-        <span style="font-size: 13px; font-weight: 600; display: block; margin-bottom: 8px;">Custom Header Glow</span>
+        <span style="font-size: 13px; font-weight: 600; display: block; margin-bottom: 8px;">Custom Header Palette</span>
         <div style="display: flex; gap: 8px;">
-          <div onclick="changeBrandAccent('#0062ff', '#0046c7')" style="width: 24px; height: 24px; background: linear-gradient(135deg, #0062ff, #0046c7); border-radius: 50%; cursor: pointer; border: 2px solid white; box-shadow: 0 0 0 1px #cbd5e1;"></div>
-          <div onclick="changeBrandAccent('#7928ca', '#4c058a')" style="width: 24px; height: 24px; background: linear-gradient(135deg, #7928ca, #4c058a); border-radius: 50%; cursor: pointer; border: 2px solid white; box-shadow: 0 0 0 1px transparent;"></div>
-          <div onclick="changeBrandAccent('#ff007f', '#a3004d')" style="width: 24px; height: 24px; background: linear-gradient(135deg, #ff007f, #a3004d); border-radius: 50%; cursor: pointer; border: 2px solid white; box-shadow: 0 0 0 1px transparent;"></div>
-          <div onclick="changeBrandAccent('#10b981', '#065f46')" style="width: 24px; height: 24px; background: linear-gradient(135deg, #10b981, #065f46); border-radius: 50%; cursor: pointer; border: 2px solid white; box-shadow: 0 0 0 1px transparent;"></div>
+          <div onclick="changeBrandAccent('#0062ff')" style="width: 24px; height: 24px; background: #0062ff; border-radius: 50%; cursor: pointer; border: 2px solid white; box-shadow: 0 0 0 1px #cbd5e1;"></div>
+          <div onclick="changeBrandAccent('#7928ca')" style="width: 24px; height: 24px; background: #7928ca; border-radius: 50%; cursor: pointer; border: 2px solid white; box-shadow: 0 0 0 1px transparent;"></div>
+          <div onclick="changeBrandAccent('#ff007f')" style="width: 24px; height: 24px; background: #ff007f; border-radius: 50%; cursor: pointer; border: 2px solid white; box-shadow: 0 0 0 1px transparent;"></div>
+          <div onclick="changeBrandAccent('#10b981')" style="width: 24px; height: 24px; background: #10b981; border-radius: 50%; cursor: pointer; border: 2px solid white; box-shadow: 0 0 0 1px transparent;"></div>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- 🔍 2. Modernized Google-Style Pill Search Engine Wrapper -->
-  <div style="position: relative; width: 270px; min-width: 210px;">
+  <!-- 🔍 Pill Autocomplete Live Media Search Engine -->
+  <div style="position: relative; width: 250px; min-width: 190px;">
     <input type="text" id="gameSearch" oninput="filterTopGames()" placeholder="Search Games..." 
-           style="padding: 12px 20px; border-radius: 50px; border: 1px solid rgba(255,255,255,0.25); background: rgba(255, 255, 255, 0.98); font-size: 14px; width: 100%; box-sizing: border-box; outline: none; transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1); color: #0f172a; font-weight: 500; box-shadow: 0 2px 6px rgba(0,0,0,0.06);"
+           style="padding: 11px 18px; border-radius: 50px; border: 1px solid rgba(255,255,255,0.25); background: rgba(255, 255, 255, 0.98); font-size: 14px; width: 100%; box-sizing: border-box; outline: none; transition: all 0.25s; color: #0f172a; font-weight: 500;"
            onfocus="this.style.boxShadow='0 0 0 4px rgba(255,255,255,0.35), 0 5px 18px rgba(0,0,0,0.15)';"
            onblur="setTimeout(() => { document.getElementById('searchDropdown').style.opacity = '0'; setTimeout(() => { document.getElementById('searchDropdown').style.display = 'none'; }, 150); }, 250);">
-    
-    <!-- Floating Live Rich-Media Dropdown Overlay (Max 3 items with images) -->
-    <div id="searchDropdown" style="display: none; opacity: 0; position: absolute; top: calc(100% + 8px); left: 0; width: 340px; background: #ffffff; border-radius: 14px; box-shadow: 0 12px 35px rgba(0,0,0,0.16); border: 1px solid rgba(0,0,0,0.06); overflow: hidden; transition: opacity 0.15s ease; transform-origin: top center; z-index: 1000000;"></div>
+    <div id="searchDropdown" style="display: none; opacity: 0; position: absolute; top: calc(100% + 8px); left: 0; width: 330px; background: #ffffff; border-radius: 14px; box-shadow: 0 12px 35px rgba(0,0,0,0.16); border: 1px solid rgba(0,0,0,0.06); overflow: hidden; transition: opacity 0.15s ease; z-index: 1000000;"></div>
   </div>
 
-  <!-- 🧱 3. Premium Interactive Action Buttons Block Grid -->
-  <div style="display: flex; gap: 14px; align-items: center; flex-wrap: wrap;">
+  <!-- 🧱 System Header Action Layout Navigation Options -->
+  <div style="display: flex; gap: 12px; align-items: center; flex-wrap: wrap;">
+    <button onclick="launchRandomGame()" 
+            style="background: #ffc107; border: 1px solid #e0a800; color: #0f172a; font-size: 14px; font-weight: 700; cursor: pointer; padding: 10px 18px; border-radius: 50px; white-space: nowrap; transition: all 0.2s; box-shadow: 0 2px 5px rgba(0,0,0,0.1); outline: none;"
+            onmouseenter="this.style.background='#e0a800'; this.style.transform='translateY(-2px)'; this.style.boxShadow='0 5px 15px rgba(0,0,0,0.2)';"
+            onmouseleave="this.style.background='#ffc107'; this.style.transform='translateY(0)';"
+            onmousedown="this.style.transform='translateY(1px)';">
+      🎲 Shuffle Game
+    </button>
+
     <button onclick="playSatisfyingClick(); openGame('https://forms.gle', 'Google Docs')" 
-            style="background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.18); color: white; font-size: 14.5px; font-weight: 600; cursor: pointer; padding: 10px 20px; border-radius: 50px; font-family: inherit; white-space: nowrap; transition: all 0.2s cubic-bezier(0.25, 0.8, 0.25, 1); box-shadow: 0 2px 5px rgba(0,0,0,0.05);"
-            onmouseenter="this.style.background='rgba(255,255,255,0.2)'; this.style.transform='translateY(-2px)'; this.style.boxShadow='0 5px 15px rgba(0,0,0,0.15)';"
-            onmouseleave="this.style.background='rgba(255,255,255,0.08)'; this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 5px rgba(0,0,0,0.05)';"
-            onmousedown="this.style.transform='translateY(0.5px)';"
-            onmouseup="this.style.transform='translateY(-2px)';">
-      📝 Report Problem / Suggestion
-    </button>
-
-    <button onclick="playSatisfyingClick(); openGame('PLACEHOLDER LINK', 'Google Docs')" 
-            style="background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.18); color: white; font-size: 14.5px; font-weight: 600; cursor: pointer; padding: 10px 20px; border-radius: 50px; font-family: inherit; white-space: nowrap; transition: all 0.2s cubic-bezier(0.25, 0.8, 0.25, 1); box-shadow: 0 2px 5px rgba(0,0,0,0.05);"
-            onmouseenter="this.style.background='rgba(255,255,255,0.2)'; this.style.transform='translateY(-2px)'; this.style.boxShadow='0 5px 15px rgba(0,0,0,0.15)';"
-            onmouseleave="this.style.background='rgba(255,255,255,0.08)'; this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 5px rgba(0,0,0,0.05)';"
-            onmousedown="this.style.transform='translateY(0.5px)';"
-            onmouseup="this.style.transform='translateY(-2px)';">
-      ⚡ Kahoot & Blooket Hacks
+            style="background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.18); color: white; font-size: 14px; font-weight: 600; cursor: pointer; padding: 10px 18px; border-radius: 50px; white-space: nowrap; transition: all 0.2s; outline: none;"
+            onmouseenter="this.style.background='rgba(255,255,255,0.2)'; this.style.transform='translateY(-2px)';"
+            onmouseleave="this.style.background='rgba(255,255,255,0.08)'; this.style.transform='translateY(0)';">
+      📝 Report Issue
     </button>
   </div>
 
-  <!-- 🐸 4. Perfectly Visible Embedded Galaxy Splash Text Wrapper Layer -->
+  <!-- 🐸 Real-time Animated Splash Layer Anchor -->
   <div style="margin-left: auto; padding-right: 10px; display: flex; align-items: center;">
     <h4 class="mc-text">Lil Croak was here</h4>
   </div>
 </div>
 
 <!-- ========================================================== -->
-<!-- 🎨 DESIGN SYSTEM ENGINE AND ANIMATION SCHEDULER            -->
+<!-- 🗺️ CONTAINER MODULES ROW FOR TRENDING AND PINNED SHELVES    -->
+<!-- ========================================================== -->
+<div style="max-width: 1200px; margin: 20px auto; padding: 0 20px; font-family: -apple-system, BlinkMacSystemFont, sans-serif;">
+  
+  <!-- Automatic Smart Category Filter Tab Pills -->
+  <div id="autoCategoryTabs" style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 25px; padding-bottom: 12px; border-bottom: 1px solid rgba(0,0,0,0.06);">
+    <button onclick="filterCategory('all', this)" class="tab-pill active-tab">✨ All Games</button>
+    <button onclick="filterCategory('skill', this)" class="tab-pill">🏆 Skill</button>
+    <button onclick="filterCategory('driving', this)" class="tab-pill">🚗 Driving</button>
+    <button onclick="filterCategory('hacks', this)" class="tab-pill">⚡ Hacks</button>
+  </div>
+
+  <!-- ⭐ Dynamic Favorites Tray Panel Component -->
+  <div id="favoritesSection" style="display: none; margin-bottom: 35px; background: rgba(0,98,255,0.03); padding: 20px; border-radius: 16px; border: 1px dashed #0062ff;">
+    <h2 style="margin: 0 0 15px 0; font-size: 18px; color: #0062ff; display: flex; align-items: center; gap: 8px; font-weight: bold;">⭐ Pinned Favorites</h2>
+    <div id="favoritesGrid" class="game-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 20px;"></div>
+  </div>
+
+  <!-- 🔥 10-Game Automatic Shuffling Rotating Trending Display Row -->
+  <div id="trendingSection" style="margin-bottom: 35px; background: linear-gradient(135deg, rgba(255,0,127,0.02) 0%, rgba(121,40,202,0.02) 100%); padding: 20px; border-radius: 16px; border: 1px solid rgba(121,40,202,0.12);">
+    <h2 style="margin: 0 0 15px 0; font-size: 18px; color: #7928ca; display: flex; align-items: center; gap: 8px; font-weight: bold;">🔥 Trending Right Now</h2>
+    <div id="trendingGrid" class="game-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 20px;"></div>
+  </div>
+</div>
+
+<!-- ========================================================== -->
+<!-- 🎨 PREMIUM DESIGN SYSTEMS AND INTERACTION ANIMATION TIMELINES -->
 <!-- ========================================================== -->
 <style>
-@keyframes galaxyShift {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-@keyframes splash {
-  0% { transform: rotate(-12deg) scale(1); }
-  50% { transform: rotate(-12deg) scale(1.08); }
-  100% { transform: rotate(-12deg) scale(1); }
-}
-.mc-text {
-  font-family: "Pixelify Sans", sans-serif;
-  font-size: 21px;
-  font-weight: bold;
-  font-style: normal;
-  display: inline-block;
-  white-space: nowrap;
-  margin: 0;
-  transform: rotate(-12deg);
-  background: linear-gradient(45deg, #ff007f, #7928ca, #00dfd8, #ff007f);
-  background-size: 300% 300%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  filter: drop-shadow(2px 2px 0px #000000) drop-shadow(0px 0px 8px rgba(0, 223, 216, 0.5)); 
-  animation: splash 1.2s infinite ease-in-out, galaxyShift 4s ease infinite;
-}
-body.dark-portal-theme {
-    background-color: #0f172a !important;
-  color: #f8fafc !important;
-}
-body.dark-portal-theme #settingsPanel {
-  background: #1e293b !important;
-  color: #f8fafc !important;
-  border-color: rgba(255,255,255,0.08) !important;
-}
-body.dark-portal-theme #settingsPanel h3 {
-  color: #ffffff !important;
-  border-color: rgba(255,255,255,0.08) !important;
-}
-body.dark-portal-theme #searchDropdown {
-  background: #1e293b !important;
-  border-color: rgba(255,255,255,0.08) !important;
-}
-</style>
-
-<script>
-let audioCtxInstance = null;
-let globalSoundEnabled = true;
-let isCloaked = false;
-
-const originalTitle = document.title;
-const originalFavicon = document.querySelector("link[rel*='icon']") ? document.querySelector("link[rel*='icon']").href : "";
-
-document.addEventListener("DOMContentLoaded", () => {
-  if (localStorage.getItem("portalTheme") === "dark") {
-    document.body.classList.add("dark-portal-theme");
-    const btn = document.getElementById("themeSettingBtn");
-    if(btn) { btn.textContent = "🌙 Dark"; btn.style.background = "#334155"; btn.style.color = "#ffffff"; }
-  }
-  if (localStorage.getItem("portalSound") === "off") {
-    globalSoundEnabled = false;
-    const btn = document.getElementById("audioSettingBtn");
-    if(btn) { btn.textContent = "🔇 Muted"; btn.style.background = "#fef2f2"; btn.style.borderColor = "#fca5a5"; btn.style.color = "#991b1b"; }
-  }
-  if (localStorage.getItem("portalCloak") === "on") {
-    enableTabCloak(true);
-  }
-});
-
-window.addEventListener("keydown", (e) => {
-  if (e.key === "Escape") {
-    window.location.href = "https://google.com";
-  }
-});
-
-function enableTabCloak(activate) {
-  const btn = document.getElementById("cloakSettingBtn");
-  let faviconNode = document.querySelector("link[rel*='icon']");
-  
-  if (!faviconNode) {
-    faviconNode = document.createElement("link");
-    faviconNode.rel = "shortcut icon";
-    document.head.appendChild(faviconNode);
-  }
-
-  if (activate) {
-    isCloaked = true;
-    document.title = "Google Docs";
-    faviconNode.href = "https://gstatic.com";
-    localStorage.setItem("portalCloak", "on");
-    if(btn) { btn.textContent = "✅ Active"; btn.style.background = "#ecfdf5"; btn.style.borderColor = "#a7f3d0"; btn.style.color = "#047857"; }
-  } else {
-    isCloaked = false;
-    document.title = originalTitle;
-    faviconNode.href = originalFavicon;
-    localStorage.setItem("portalCloak", "off");
-    if(btn) { btn.textContent = "❌ Disabled"; btn.style.background = "#f1f5f9"; btn.style.borderColor = "#cbd5e1"; btn.style.color = "#334155"; }
-  }
-}
-
-function toggleCloakSetting() {
-  enableTabCloak(!isCloaked);
-  playSatisfyingClick();
-}
-
-function initAudioContext() {
-  if (!audioCtxInstance) {
-    audioCtxInstance = new (window.AudioContext || window.webkitAudioContext)();
-  }
-}
-
-function playSatisfyingClick() {
-  if (!globalSoundEnabled) return;
-  initAudioContext();
-  if (!audioCtxInstance) return;
-  
-  const mainOsc = audioCtxInstance.createOscillator();
-  const mechanicalSnap = audioCtxInstance.createOscillator();
-  const volumeGain = audioCtxInstance.createGain();
-  
-  mainOsc.type = 'sine';
-  mainOsc.frequency.setValueAtTime(540, audioCtxInstance.currentTime); 
-  mainOsc.frequency.exponentialRampToValueAtTime(140, audioCtxInstance.currentTime + 0.06);
-  
-  mechanicalSnap.type = 'triangle';
-  mechanicalSnap.frequency.setValueAtTime(1300, audioCtxInstance.currentTime);
-  mechanicalSnap.frequency.exponentialRampToValueAtTime(400, audioCtxInstance.currentTime + 0.02);
-  
-  volumeGain.gain.setValueAtTime(0.03, audioCtxInstance.currentTime); 
-  volumeGain.gain.exponentialRampToValueAtTime(0.0001, audioCtxInstance.currentTime + 0.06);
-  
-  mainOsc.connect(volumeGain);
-  mechanicalSnap.connect(volumeGain);
-  volumeGain.connect(audioCtxInstance.destination);
-  
-  mainOsc.start();
-  mechanicalSnap.start();
-  mainOsc.stop(audioCtxInstance.currentTime + 0.06);
-  mechanicalSnap.stop(audioCtxInstance.currentTime + 0.06);
-}
-
-function toggleSettingsMenu() {
-  playSatisfyingClick();
-  const panel = document.getElementById("settingsPanel");
-  panel.style.display = panel.style.display === "none" ? "block" : "none";
-}
-
-function toggleThemeSetting() {
-  const btn = document.getElementById("themeSettingBtn");
-  if (document.body.classList.contains("dark-portal-theme")) {
-    document.body.classList.remove("dark-portal-theme");
-    localStorage.setItem("portalTheme", "light");
-    btn.textContent = "☀️ Light";
-    btn.style.background = "#f1f5f9";
-    btn.style.color = "#334155";
-  } else {
-    document.body.classList.add("dark-portal-theme");
-    localStorage.setItem("portalTheme", "dark");
-    btn.textContent = "🌙 Dark";
-    btn.style.background = "#334155";
-    btn.style.color = "#ffffff";
-  }
-  playSatisfyingClick();
-}
-
-function toggleAudioSetting() {
-  const btn = document.getElementById("audioSettingBtn");
-  if (globalSoundEnabled) {
-    globalSoundEnabled = false;
-    localStorage.setItem("portalSound", "off");
-    btn.textContent = "🔇 Muted";
-    btn.style.background = "#fef2f2";
-    btn.style.borderColor = "#fca5a5";
-    btn.style.color = "#991b1b";
-  } else {
-    globalSoundEnabled = true;
-    localStorage.setItem("portalSound", "on");
-    btn.textContent = "🔊 Sound On";
-    btn.style.background = "#ecfdf5";
-    btn.style.borderColor = "#a7f3d0";
-    btn.style.color = "#047857";
-    playSatisfyingClick();
-  }
-}
-
-function changeBrandAccent(startCol, endCol) {
-  document.getElementById("premiumNavbar").style.background = `linear-gradient(135deg, ${startCol} 0%, ${endCol} 100%)`;
-  playSatisfyingClick();
-}
-
-window.addEventListener("click", (e) => {
-  const panel = document.getElementById("settingsPanel");
-  const gear = document.getElementById("settingsGearBtn");
-  if (panel && panel.style.display === "block" && !panel.contains(e.target) && !gear.contains(e.target)) {
-    panel.style.display = "none";
-  }
-});
-
-function filterTopGames() {
-  initAudioContext();
-  const input = document.getElementById('gameSearch').value.toLowerCase().trim();
-  const dropdown = document.getElementById('searchDropdown');
-  dropdown.innerHTML = "";
-  
-  if (!input) {
-    dropdown.style.opacity = '0';
-    setTimeout(() => { dropdown.style.display = 'none'; }, 150);
-    return;
-  }
-  
-  const gameElements = Array.from(document.querySelectorAll('[onclick*="openGame"]'));
-  const discoveredGames = [];
-  
-  gameElements.forEach(element => {
-    if (element.tagName === 'BUTTON' && (element.innerText.includes('Report') || element.innerText.includes('Hacks'))) return;
-    
-    let gameName = element.innerText || element.textContent || "";
-    gameName = gameName.replace(/\s+/g, ' ').trim();
-    
-    const onclickAttr = element.getAttribute('onclick') || "";
-    const extractedParams = onclickAttr.match(/openGame\s*\(\s*['"]([^'"]+)['"]\s*,\s*['"]([^'"]+)['"]/);
-    
-    if (gameName && extractedParams && extractedParams[1] && extractedParams[2]) {
-      if (!discoveredGames.some(g => g.name.toLowerCase() === gameName.toLowerCase())) {
-        let thumbSrc = "";
-        const embeddedImg = element.querySelector('img');
-        if (embeddedImg) {
-          thumbSrc = embeddedImg.getAttribute('src') || "";
-        } else if (element.parentElement) {
-          const siblingImg = element.parentElement.querySelector('img');
-          if (siblingImg) thumbSrc = siblingImg.getAttribute('src') || "";
-        }
-        
-        discoveredGames.push({
-          name: gameName,
-          url: extractedParams[1],
-          title: extractedParams[2],
-          image: thumbSrc
-        });
-      }
-    }
-  });
-
-  const topMatches = discoveredGames.filter(game => game.name.toLowerCase().includes(input)).slice(0, 3);
-  if (topMatches.length === 0) {
-    dropdown.style.opacity = '0';
-    setTimeout(() => { dropdown.style.display = 'none'; }, 150);
-    return;
-  }
-  
-  topMatches.forEach((game, index) => {
-    const item = document.createElement('div');
-    item.style.cssText = "padding: 10px 14px; display: flex; align-items: center; gap: 14px; cursor: pointer; transition: all 0.15s ease-in-out; border-bottom: 1px solid #f1f5f9;";
-    if (index === topMatches.length - 1) item.style.borderBottom = "none";
-    
-    const imgEl = document.createElement('img');
-    if (game.image) {
-      imgEl.src = game.image;
-    } else {
-      imgEl.src = "data:image/svg+xml;utf8,<svg xmlns='http://w3.org' width='40' height='40' viewBox='0 0 24 24' fill='%230062ff'><path d='M21 6H3c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2Zm-10 7H8v3H6v-3H3v-2h3V8h2v3h3v2Zm4.5 3c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5Zm3.5-3c-.83 0-1.5-.67-1.5-1.5S18.67 11 19.5 11s1.5.67 1.5 1.5-.67 1.5-1.5 1.5Z'/></svg>";
-    }
-    imgEl.style.cssText = "width: 44px; height: 44px; border-radius: 8px; object-fit: cover; background: #f1f5f9; border: 1px solid rgba(0,0,0,0.05); flex-shrink: 0;";
-    
-    const textEl = document.createElement('span');
-    textEl.textContent = game.name;
-    textEl.style.cssText = "font-size: 13.5px; color: #334155; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-family: sans-serif;";
-    
-    if (document.body.classList.contains("dark-portal-theme")) {
-      textEl.style.color = "#e2e8f0";
-    }
-    
-    item.appendChild(imgEl);
-    item.appendChild(textEl);
-    
-    item.onmouseenter = () => {
-      item.style.background = document.body.classList.contains("dark-portal-theme") ? "#334155" : "#f0f6ff";
-      textEl.style.color = "#0062ff";
-      item.style.paddingLeft = "18px";
-    };
-    item.onmouseleave = () => {
-      item.style.background = "transparent";
-      textEl.style.color = document.body.classList.contains("dark-portal-theme") ? "#e2e8f0" : "#334155";
-      item.style.paddingLeft = "14px";
-    };
-    
-    item.onclick = () => {
-      playSatisfyingClick();
-      if (typeof openGame === "function") {
-        openGame(game.url, game.title);
-      }
-document.getElementById('gameSearch').value = game.name;};dropdown.appendChild(item);});dropdown.style.display = 'block';setTimeout(() => { dropdown.style.opacity = '1'; }, 10);}
-
-
+@keyframes galaxyShift { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
+@keyframes splash { 0% { transform: rotate(-12deg) scale(1); } 50% { transform: rotate(-12deg) scale(1.08); } 100% { transform: rotate(-12deg) scale(1); } }.mc-text {font-family: "Pixelify Sans", sans-serif; font-size: 21px; font-weight: bold; display: inline-block; white-space: nowrap; margin: 0; transform: rotate(-12deg);background: linear-gradient(45deg, #ff007f, #7928ca, #00dfd8, #ff007f); background-size: 300% 300%; -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;filter: drop-shadow(2px 2px 0px #000000) drop-shadow(0px 0px 8px rgba(0, 223, 216, 0.5)); animation: splash 1.2s infinite ease-in-out, galaxyShift 4s ease infinite;}.tab-pill {padding: 8px 18px; border-radius: 30px; border: 1px solid #e2e8f0; background: #ffffff; color: #475569; font-weight: 600; font-size: 13.5px; cursor: pointer; transition: all 0.2s ease; outline: none;}.tab-pill:hover { background: #f1f5f9; color: #0062ff; transform: translateY(-1px); }.tab-pill.active-tab { background: #0062ff; color: white; border-color: #0062ff; box-shadow: 0 4px 12px rgba(0,98,255,0.25); }/* 🃏 HAND-CRAFTED GAME CARD LAYOUT TRANSITIONS (NON-AI LOOK) */.game-grid .game-card {background: #ffffff; border-radius: 12px; border: 1px solid #e2e8f0; padding: 12px; display: flex; flex-direction: column; gap: 8px; position: relative;transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); cursor: pointer; box-shadow: 0 2px 5px rgba(0,0,0,0.03); overflow: hidden; box-sizing: border-box;}.game-grid .game-card:hover {transform: translateY(-6px); box-shadow: 0 12px 22px rgba(0, 98, 255, 0.12); border-color: #0062ff;}.game-grid .game-card img {width: 100%; height: 130px; object-fit: cover; border-radius: 8px; transition: transform 0.3s ease; background: #f8fafc;}.game-grid .game-card:hover img {transform: scale(1.04);}.game-grid .game-card h1, .game-grid .game-card h2, .game-grid .game-card h3 {font-size: 15px !important; margin: 4px 0 0 0 !important; font-weight: bold !important; color: #1e293b; text-align: left; font-family: sans-serif;}/* Floating Heart Icon Geometry Mechanics */.heart-fav-btn {position: absolute; top: 16px; right: 16px; background: rgba(255,255,255,0.9); border: none; font-size: 15px; width: 32px; height: 32px;border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: 0 2px 6px rgba(0,0,0,0.12);transition: all 0.2s ease; z-index: 10; outline: none;}.heart-fav-btn:hover { transform: scale(1.15); background: #ffffff; }/* Global App Dark Mode Theme Adaptations */body.dark-portal-theme { background-color: #0f172a !important; color: #f8fafc !important; }body.dark-portal-theme #settingsPanel { background: #1e293b !important; color: #f8fafc !important; border-color: rgba(255,255,255,0.08) !important; }body.dark-portal-theme #searchDropdown { background: #1e293b !important; border-color: rgba(255,255,255,0.08) !important; }body.dark-portal-theme .tab-pill { background: #1e293b; border-color: #334155; color: #94a3b8; }body.dark-portal-theme .tab-pill:hover { background: #334155; color: white; }body.dark-portal-theme .game-grid .game-card { background: #1e293b; border-color: #334155; }body.dark-portal-theme .game-grid .game-card h1, body.dark-portal-theme .game-grid .game-card h2, body.dark-portal-theme .game-grid .game-card h3 { color: #f1f5f9; }body.dark-portal-theme .tab-pill.active-tab { background: #0062ff; color: white; }let audioCtxInstance = null;let globalSoundEnabled = true;let isCloaked = false;let runtimeGameCache = [];const originalTitle = document.title;const originalFavicon = document.querySelector("link[rel*='icon']") ? document.querySelector("link[rel*='icon']").href : "";document.addEventListener("DOMContentLoaded", () => {if (localStorage.getItem("portalTheme") === "dark") {document.body.classList.add("dark-portal-theme");const btn = document.getElementById("themeSettingBtn");if(btn) { btn.textContent = "🌙 Dark"; btn.style.background = "#334155"; btn.style.color = "#ffffff"; }}if (localStorage.getItem("portalSound") === "off") {globalSoundEnabled = false;const btn = document.getElementById("audioSettingBtn");if(btn) { btn.textContent = "🔇 Muted"; btn.style.background = "#fef2f2"; btn.style.borderColor = "#fca5a5"; btn.style.color = "#991b1b"; }}if (localStorage.getItem("portalCloak") === "on") { enableTabCloak(true); }// Execute full automated scanner arrays once base markup settles downsetTimeout(() => {scrapeAllPageCards();initializeCardSystemPhysics();buildAutomatedTrendingSection();renderFavoritesShelfGrid();}, 400);});function initAudioContext() { if (!audioCtxInstance) { audioCtxInstance = new (window.AudioContext || window.webkitAudioContext)(); } }function playSatisfyingClick() {if (!globalSoundEnabled) return;initAudioContext(); if (!audioCtxInstance) return;const mainOsc = audioCtxInstance.createOscillator();const mechanicalSnap = audioCtxInstance.createOscillator();const volumeGain = audioCtxInstance.createGain();mainOsc.type = 'sine'; mainOsc.frequency.setValueAtTime(540, audioCtxInstance.currentTime);mainOsc.frequency.exponentialRampToValueAtTime(140, audioCtxInstance.currentTime + 0.06);mechanicalSnap.type = 'triangle'; mechanicalSnap.frequency.setValueAtTime(1300, audioCtxInstance.currentTime);mechanicalSnap.frequency.exponentialRampToValueAtTime(400, audioCtxInstance.currentTime + 0.02);volumeGain.gain.setValueAtTime(0.025, audioCtxInstance.currentTime);volumeGain.gain.exponentialRampToValueAtTime(0.0001, audioCtxInstance.currentTime + 0.06);mainOsc.connect(volumeGain); mechanicalSnap.connect(volumeGain); volumeGain.connect(audioCtxInstance.destination);mainOsc.start(); mechanicalSnap.start(); mainOsc.stop(audioCtxInstance.currentTime + 0.06); mechanicalSnap.stop(audioCtxInstance.currentTime + 0.06);}function toggleSettingsMenu() { playSatisfyingClick(); const panel = document.getElementById("settingsPanel"); panel.style.display = panel.style.display === "none" ? "block" : "none"; }function toggleThemeSetting() {const btn = document.getElementById("themeSettingBtn");if (document.body.classList.contains("dark-portal-theme")) {document.body.classList.remove("dark-portal-theme"); localStorage.setItem("portalTheme", "light");btn.textContent = "☀️ Light"; btn.style.background = "#f1f5f9"; btn.style.color = "#334155";} else {document.body.classList.add("dark-portal-theme"); localStorage.setItem("portalTheme", "dark");btn.textContent = "🌙 Dark"; btn.style.background = "#334155"; btn.style.color = "#ffffff";}playSatisfyingClick();}function toggleAudioSetting() {const btn = document.getElementById("audioSettingBtn");if (globalSoundEnabled) {globalSoundEnabled = false; localStorage.setItem("portalSound", "off");btn.textContent = "🔇 Muted"; btn.style.background = "#fef2f2"; btn.style.borderColor = "#fca5a5"; btn.style.color = "#991b1b";} else {globalSoundEnabled = true; localStorage.setItem("portalSound", "on");btn.textContent = "🔊 Sound On"; btn.style.background = "#ecfdf5"; btn.style.borderColor = "#a7f3d0"; btn.style.color = "#047857";playSatisfyingClick();}}function enableTabCloak(activate) {const btn = document.getElementById("cloakSettingBtn"); let faviconNode = document.querySelector("link[rel*='icon']");if (!faviconNode) { faviconNode = document.createElement("link"); faviconNode.rel = "shortcut icon"; document.head.appendChild(faviconNode); }if (activate) {isCloaked = true; document.title = "Google Docs"; faviconNode.href = "gstatic.com";localStorage.setItem("portalCloak", "on"); if(btn) { btn.textContent = "✅ Active"; btn.style.background = "#ecfdf5"; btn.style.borderColor = "#a7f3d0"; btn.style.color = "#047857"; }} else {isCloaked = false; document.title = originalTitle; faviconNode.href = originalFavicon;localStorage.setItem("portalCloak", "off"); if(btn) { btn.textContent = "❌ Disabled"; btn.style.background = "#f1f5f9"; btn.style.borderColor = "#cbd5e1"; btn.style.color = "#334155"; }}}function toggleCloakSetting() { enableTabCloak(!isCloaked); playSatisfyingClick(); }function changeBrandAccent(hexColor) { document.getElementById("premiumNavbar").style.background = hexColor; playSatisfyingClick(); }window.addEventListener("click", (e) => {const panel = document.getElementById("settingsPanel"); const gear = document.getElementById("settingsGearBtn");if (panel && panel.style.display === "block" && !panel.contains(e.target) && !gear.contains(e.target)) panel.style.display = "none";});// ⚡ RE-ENGINEERED DOM SCRAPER: Targets '.game-card' nodes inside your true element '#gameGrid'function scrapeAllPageCards() {const container = document.getElementById("gameGrid");if (!container) return [];const cards = Array.from(container.querySelectorAll('.game-card'));const items = [];cards.forEach((card, idx) => {let name = card.innerText || card.textContent || "";name = name.replace(/\s+/g, ' ').trim();if (!name || name.includes("Report") || name.includes("Hacks") || name.includes("Lil Croak")) return;const clickAttr = card.getAttribute('onclick') || "";const params = clickAttr.match(/openGame\s*(\s*'"['"]\s*,\s*'"['"]/);if (params) {const img = card.querySelector('img');const imgSrc = img ? img.getAttribute('src') : "";let genre = "skill";const lowerName = name.toLowerCase();if (lowerName.includes("bike") || lowerName.includes("moto") || lowerName.includes("drive") || lowerName.includes("race") || lowerName.includes("road")) genre = "driving";if (lowerName.includes("hack") || lowerName.includes("blooket") || lowerName.includes("kahoot") || lowerName.includes("quiz")) genre = "hacks";items.push({ id: "game-" + idx, name: name, url: params[1], title: params[2], image: imgSrc, category: genre, rawHtml: card.outerHTML });}});runtimeGameCache = items;return items;}function initializeCardSystemPhysics() {const container = document.getElementById("gameGrid");if (!container) return;Array.from(container.querySelectorAll('.game-card')).forEach((card) => {let name = card.innerText || card.textContent || "";name = name.replace(/\s+/g, ' ').trim();if (!name || name.includes("Report") || name.includes("Hacks") || name.includes("Lil Croak")) return;const originalClick = card.getAttribute('onclick');if (originalClick && !originalClick.includes("playSatisfyingClick")) {card.setAttribute('onclick', playSatisfyingClick(); ${originalClick});}if (!card.querySelector('.heart-fav-btn')) {const heart = document.createElement('button');heart.className = 'heart-fav-btn';heart.innerHTML = isGameFavorited(name) ? "❤️" : "🤍";heart.setAttribute('onclick', event.stopPropagation(); toggleFavoriteGame('${name}', this););card.appendChild(heart);}});}function launchRandomGame() {if (runtimeGameCache.length === 0) scrapeAllPageCards();if (runtimeGameCache.length === 0) return;playSatisfyingClick();const randomSelection = runtimeGameCache[Math.floor(Math.random() * runtimeGameCache.length)];if (typeof openGame === "function") openGame(randomSelection.url, randomSelection.title);}function filterCategory(type, element) {playSatisfyingClick();document.querySelectorAll('.tab-pill').forEach(t => t.classList.remove('active-tab'));element.classList.add('active-tab');const container = document.getElementById("gameGrid");if (!container) return;if (runtimeGameCache.length === 0) scrapeAllPageCards();Array.from(container.querySelectorAll('.game-card')).forEach((card, idx) => {const cachedItem = runtimeGameCache.find(g => g.id === "game-" + idx);if (!cachedItem) return;if (type === 'all' || cachedItem.category === type) {card.style.display = "flex";} else {card.style.display = "none";}});}function getFavoritesList() { return JSON.parse(localStorage.getItem("portalFavs")) || []; }function isGameFavorited(name) { return getFavoritesList().includes(name); }function toggleFavoriteGame(name, element) {playSatisfyingClick();let favs = getFavoritesList();if (favs.includes(name)) {favs = favs.filter(n => n !== name); element.innerHTML = "🤍";} else {favs.push(name); element.innerHTML = "❤️";}localStorage.setItem("portalFavs", JSON.stringify(favs));renderFavoritesShelfGrid();document.getElementById("gameGrid").querySelectorAll('.game-card').forEach(card => {if ((card.innerText || "").replace(/\s+/g, ' ').trim().includes(name)) {const h = card.querySelector('.heart-fav-btn');if (h) h.innerHTML = favs.includes(name) ? "❤️" : "🤍";}});}function renderFavoritesShelfGrid() {const shelf = document.getElementById("favoritesSection");const grid = document.getElementById("favoritesGrid");if (!grid || !shelf) return;grid.innerHTML = "";const favs = getFavoritesList();if (favs.length === 0) { shelf.style.display = "none"; return; }if (runtimeGameCache.length === 0) scrapeAllPageCards();favs.forEach(favName => {const matched = runtimeGameCache.find(g => g.name === favName);if (matched) {const cleanNode = document.createElement('div');cleanNode.innerHTML = matched.rawHtml;const actualCard = cleanNode.firstElementChild;const h = actualCard.querySelector('.heart-fav-btn');if(h) h.setAttribute('onclick', event.stopPropagation(); toggleFavoriteGame('${favName}', this););actualCard.setAttribute('onclick', playSatisfyingClick(); openGame('${matched.url}', '${matched.title}'););grid.appendChild(actualCard);}});shelf.style.display = "block";}function buildAutomatedTrendingSection() {const grid = document.getElementById("trendingGrid");if (!grid) return;if (runtimeGameCache.length === 0) scrapeAllPageCards();if (runtimeGameCache.length === 0) return;let trendingIds = JSON.parse(localStorage.getItem("trendingIds")) || [];let lastTimestamp = localStorage.getItem("trendingTimestamp") || 0;const currentTimestamp = Date.now();const threeDaysInMillis = 3 * 24 * 60 * 60 * 1000;if (!lastTimestamp || (currentTimestamp - lastTimestamp > threeDaysInMillis) || trendingIds.length === 0) {trendingIds = [];const internalPool = [...runtimeGameCache];const shuffleCount = Math.min(10, internalPool.length);for (let i = 0; i < shuffleCount; i++) {const luckyIdx = Math.floor(Math.random() * internalPool.length);trendingIds.push(internalPool[luckyIdx].name);internalPool.splice(luckyIdx, 1);}localStorage.setItem("trendingIds", JSON.stringify(trendingIds));localStorage.setItem("trendingTimestamp", currentTimestamp.toString());}grid.innerHTML = "";trendingIds.forEach(gameName => {const matched = runtimeGameCache.find(g => g.name === gameName);if (matched) {const cleanNode = document.createElement('div');cleanNode.innerHTML = matched.rawHtml;const actualCard = cleanNode.firstElementChild;const h = actualCard.querySelector('.heart-fav-btn');if (h) h.setAttribute('onclick', event.stopPropagation(); toggleFavoriteGame('${gameName}', this););actualCard.setAttribute('onclick', playSatisfyingClick(); openGame('${matched.url}', '${matched.title}'););grid.appendChild(actualCard);}});}function filterTopGames() {initAudioContext();const input = document.getElementById('gameSearch').value.toLowerCase().trim();const dropdown = document.getElementById('searchDropdown');dropdown.innerHTML = "";if (!input) { dropdown.style.opacity = '0'; setTimeout(() => { dropdown.style.display = 'none'; }, 150); return; }if (runtimeGameCache.length === 0) scrapeAllPageCards();const topMatches = runtimeGameCache.filter(game => game.name.toLowerCase().includes(input)).slice(0, 3);if (topMatches.length === 0) { dropdown.style.opacity = '0'; setTimeout(() => { dropdown.style.display = 'none'; }, 150); return; }topMatches.forEach((game, index) => {const item = document.createElement('div');item.style.cssText = "padding: 10px 14px; display: flex; align-items: center; gap: 14px; cursor: pointer; transition: all 0.15s ease-in-out; border-bottom: 1px solid #f1f5f9; font-family: sans-serif;";if (index === topMatches.length - 1) item.style.borderBottom = "none";const imgEl = document.createElement('img');imgEl.src = game.image ? game.image : "data:image/svg+xml;utf8,";imgEl.style.cssText = "width: 44px; height: 44px; border-radius: 8px; object-fit: cover; background: #f1f5f9; border: 1px solid rgba(0,0,0,0.05); flex-shrink: 0;";const textEl = document.createElement('span'); textEl.textContent = game.name;textEl.style.cssText = "font-size: 13.5px; color: #334155; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;";if (document.body.classList.contains("dark-portal-theme")) textEl.style.color = "#e2e8f0";item.appendChild(imgEl); item.appendChild(textEl);item.onmouseenter = () => {item.style.background = document.body.classList.contains("dark-portal-theme") ? "#334155" : "#f0f6ff";textEl.style.color = "#0062ff"; item.style.paddingLeft = "18px";};item.onmouseleave = () => {item.style.background = "transparent";textEl.style.color = document.body.classList.contains("dark-portal-theme") ? "#e2e8f0" : "#334155";item.style.paddingLeft = "14px";};item.onclick = () => {playSatisfyingClick();if (typeof openGame === "function") openGame(game.url, game.title);document.getElementById('gameSearch').value = game.name;};dropdown.appendChild(item);});dropdown.style.display = 'block'; setTimeout(() => { dropdown.style.opacity = '1'; }, 10);}
 	
 </header>
 <div class="game-grid" id="gameGrid">
