@@ -248,25 +248,139 @@
 <body>
 <header>
 	  <p class="rainbow-text-creator"></p>
-  <input type="text" id="searchBar" placeholder="Search Games..." />
 
-<!-- START OF NEW NAVBAR STYLING -->
-<div style="display: flex; gap: 25px; align-items: center; padding: 10px 0; margin-bottom: 15px; flex-wrap: wrap;">
+	<!-- ========================================== -->
+<!-- 🚀 ULTRA-PREMIUM AUTOMATED NAVIGATION BAR   -->
+<!-- ========================================== -->
+<div style="background: linear-gradient(135deg, #0062ff 0%, #0046c7 100%); padding: 14px 24px; display: flex; align-items: center; justify-content: flex-start; gap: 30px; flex-wrap: wrap; box-sizing: border-box; width: 100%; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; box-shadow: 0 4px 20px rgba(0, 64, 255, 0.15); border-bottom: 1px solid rgba(255,255,255,0.1); position: relative; z-index: 99999;">
   
-  <!-- Button 1: Report Problem -->
-  <button onclick="openGame('https://forms.gle', 'Google Docs')" 
-          style="background: none; border: none; color: white; font-size: 20px; font-weight: bold; cursor: pointer; padding: 0; font-family: sans-serif;">
-    Report Problem/Game Suggestion
-  </button>
+  <!-- Modern Search Pill Wrapper -->
+  <div style="position: relative; width: 280px; min-width: 220px;">
+    <input type="text" id="gameSearch" oninput="filterTopGames()" placeholder="Search Games..." 
+           style="padding: 11px 18px; border-radius: 50px; border: 1px solid rgba(255,255,255,0.2); background: rgba(255, 255, 255, 0.95); font-size: 14px; width: 100%; box-sizing: border-box; outline: none; transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1); color: #1e293b; font-weight: 500; box-shadow: 0 2px 6px rgba(0,0,0,0.06);"
+           onfocus="this.style.boxShadow='0 0 0 4px rgba(255,255,255,0.25), 0 4px 12px rgba(0,0,0,0.15)'; this.style.transform='translateY(-1px)';"
+           onblur="setTimeout(() => { document.getElementById('searchDropdown').style.opacity = '0'; setTimeout(() => { document.getElementById('searchDropdown').style.display = 'none'; }, 150); }, 250);">
+    
+    <!-- Floating Live Dropdown (Capped at top 3 results) -->
+    <div id="searchDropdown" style="display: none; opacity: 0; position: absolute; top: calc(100% + 8px); left: 0; width: 100%; background: #ffffff; border-radius: 12px; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.15), 0 8px 10px -6px rgba(0,0,0,0.15); border: 1px solid rgba(0,0,0,0.05); overflow: hidden; transition: opacity 0.15s ease; transform-origin: top center;"></div>
+  </div>
 
-  <!-- Button 2: Hacks Section -->
-  <button onclick="openGame('PLACEHOLDER LINK', 'Google Docs')" 
-          style="background: none; border: none; color: white; font-size: 24px; font-weight: bold; cursor: pointer; padding: 0; font-family: sans-serif;">
-    Kahoot & Blooket Hacks
-  </button>
+  <!-- Navigation Action Buttons -->
+  <div style="display: flex; gap: 28px; align-items: center; flex-wrap: wrap;">
+    <button onclick="openGame('https://forms.gle', 'Google Docs')" 
+            style="background: none; border: none; color: rgba(255,255,255,0.9); font-size: 16px; font-weight: 600; cursor: pointer; padding: 6px 0; font-family: inherit; white-space: nowrap; transition: all 0.2s ease; border-bottom: 2px solid transparent;"
+            onmouseenter="this.style.color='#ffffff'; this.style.borderBottomColor='#ffffff';"
+            onmouseleave="this.style.color='rgba(255,255,255,0.9)'; this.style.borderBottomColor='transparent';">
+      Report Problem/Game Suggestion
+    </button>
 
+    <button onclick="openGame('PLACEHOLDER LINK', 'Google Docs')" 
+            style="background: none; border: none; color: rgba(255,255,255,0.9); font-size: 16px; font-weight: 600; cursor: pointer; padding: 6px 0; font-family: inherit; white-space: nowrap; transition: all 0.2s ease; border-bottom: 2px solid transparent;"
+            onmouseenter="this.style.color='#ffffff'; this.style.borderBottomColor='#ffffff';"
+            onmouseleave="this.style.color='rgba(255,255,255,0.9)'; this.style.borderBottomColor='transparent';">
+      Kahoot & Blooket Hacks
+    </button>
+  </div>
 </div>
-<!-- END OF NEW NAVBAR STYLING -->
+
+<!-- ========================================== -->
+<!-- 🛠️ FULLY AUTOMATED ZERO-MAINTENANCE ENGINE -->
+<!-- ========================================== -->
+<script>
+function filterTopGames() {
+  const input = document.getElementById('gameSearch').value.toLowerCase().trim();
+  const dropdown = document.getElementById('searchDropdown');
+  
+  dropdown.innerHTML = "";
+  
+  if (!input) {
+    dropdown.style.opacity = '0';
+    setTimeout(() => { dropdown.style.display = 'none'; }, 150);
+    return;
+  }
+  
+  // 1. Scrapes the entire live page for any playable game elements dynamically
+  const gameElements = Array.from(document.querySelectorAll('[onclick*="openGame"]'));
+  const discoveredGames = [];
+  
+  gameElements.forEach(element => {
+    // Skip navigation links themselves so they don't appear inside search results
+    if (element.tagName === 'BUTTON' && (element.innerText.includes('Report') || element.innerText.includes('Hacks'))) {
+      return;
+    }
+    
+    // Clean up title text by stripping messy formatting and line breaks
+    let gameName = element.innerText || element.textContent || "";
+    gameName = gameName.replace(/\s+/g, ' ').trim();
+    
+    // Regex safely extracts strings wrapped inside single OR double quotes
+    const onclickAttr = element.getAttribute('onclick') || "";
+    const extractedParams = onclickAttr.match(/openGame\s*\(\s*['"]([^'"]+)['"]\s*,\s*['"]([^'"]+)['"]/);
+    
+    if (gameName && extractedParams && extractedParams[1] && extractedParams[2]) {
+      // Prevent duplicates if elements overlap in layout
+      if (!discoveredGames.some(g => g.name.toLowerCase() === gameName.toLowerCase())) {
+        discoveredGames.push({
+          name: gameName,
+          url: extractedParams[1],
+          title: extractedParams[2]
+        });
+      }
+    }
+  });
+
+  // 2. Filter list against user query and cap instantly at 3 entries
+  const topMatches = discoveredGames
+    .filter(game => game.name.toLowerCase().includes(input))
+    .slice(0, 3);
+    
+  if (topMatches.length === 0) {
+    dropdown.style.opacity = '0';
+    setTimeout(() => { dropdown.style.display = 'none'; }, 150);
+    return;
+  }
+  
+  // 3. Render floating list item elements
+  topMatches.forEach((game, index) => {
+    const item = document.createElement('div');
+    item.textContent = game.name;
+    item.style.cssText = "padding: 13px 18px; font-size: 13.5px; color: #334155; font-weight: 500; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; transition: all 0.15s ease-in-out;";
+    
+    if (index !== topMatches.length - 1) {
+      item.style.borderBottom = "1px solid #f1f5f9";
+    }
+    
+    // Premium hover feedback interactions
+    item.onmouseenter = () => {
+      item.style.background = "#f0f6ff";
+      item.style.color = "#0062ff";
+      item.style.paddingLeft = "24px";
+    };
+    item.onmouseleave = () => {
+      item.style.background = "transparent";
+      item.style.color = "#334155";
+      item.style.paddingLeft = "18px";
+    };
+    
+    // Safe execution container injection trigger
+    item.onclick = () => {
+      if (typeof openGame === "function") {
+        openGame(game.url, game.title);
+      } else {
+        console.error("The openGame custom function execution context was missing.");
+      }
+      document.getElementById('gameSearch').value = game.name;
+    };
+    
+    dropdown.appendChild(item);
+  });
+  
+  dropdown.style.display = 'block';
+  setTimeout(() => { dropdown.style.opacity = '1'; }, 10);
+}
+</script>
+<!-- ========================================== -->
+
 
     <h4 class="mc-text">Lil Croak was here</h4>
 	
