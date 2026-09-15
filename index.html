@@ -196,29 +196,50 @@
     border-radius: 50%;
     pointer-events: none;
     z-index: 999999;
+	
+}
+/* 🌌 1. Galaxy Color-Flow Timeline */
+@keyframes galaxyShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
-    .mc-text {
+/* 🪐 2. Your Fixed Minecraft Splash Block */
+.mc-text {
   font-family: "Pixelify Sans", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
-        color: #ffff00;
-		display: inline-block;
-		position: absolute;
-        left: 1070px;   /* move horizontally */
-        top: 35px;    /* move vertically */
-		white-space: nowrap;
-		  font-style: normal;
+  display: inline-block;
+  position: absolute;
+  left: 1070px;   /* move horizontally */
+  top: 35px;      /* move vertically */
+  white-space: nowrap;
 
+  /* 💫 Cosmic Gradient Mapping Engine */
+  background: linear-gradient(
+    45deg, 
+    #ff007f, /* Nebula Pink */
+    #7928ca, /* Cosmic Purple */
+    #00dfd8, /* Galactic Teal */
+    #ff007f  /* Loops smoothly back to Pink */
+  );
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 
-        text-shadow: 1px 1px 0 #000;
+  /* Black Minecraft shadow behind the shifting galaxy colors */
+  filter: drop-shadow(2px 2px 0px #000000) drop-shadow(0px 0px 8px rgba(121, 40, 202, 0.5));
 
-        /* start tilted */
-        transform: rotate(-15deg);
+  /* Tilted text styling */
+  transform: rotate(-15deg);
 
-        animation: splash 1.2s infinite ease-in-out;
-    }
+  /* Runs BOTH your bounce animation AND the color-shift animation smoothly at the same time */
+  animation: splash 1.2s infinite ease-in-out, galaxyShift 5s ease infinite;
+}
+
 
     /* Minecraft-style splash wobble */
     @keyframes splash {
