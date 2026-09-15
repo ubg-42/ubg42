@@ -268,14 +268,13 @@
 </head>
 <body>
 <header>
-	  <p class="rainbow-text-creator"></p>
-
-	<!-- ========================================== -->
-<!-- 🚀 ULTRA-PREMIUM AUTOMATED NAVIGATION BAR   -->
-<!-- ========================================== -->
+	 	
+<!-- ========================================================== -->
+<!-- 🌌 THE ULTIMATE ZERO-MAINTENANCE NAVBAR ENGINE             -->
+<!-- ========================================================== -->
 <div style="background: linear-gradient(135deg, #0062ff 0%, #0046c7 100%); padding: 14px 24px; display: flex; align-items: center; justify-content: flex-start; gap: 30px; flex-wrap: wrap; box-sizing: border-box; width: 100%; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; box-shadow: 0 4px 20px rgba(0, 64, 255, 0.15); border-bottom: 1px solid rgba(255,255,255,0.1); position: relative; z-index: 99999;">
   
-  <!-- Modern Search Pill Wrapper -->
+  <!-- 1. Google-Style Pill Search Engine Wrapper -->
   <div style="position: relative; width: 280px; min-width: 220px;">
     <input type="text" id="gameSearch" oninput="filterTopGames()" placeholder="Search Games..." 
            style="padding: 11px 18px; border-radius: 50px; border: 1px solid rgba(255,255,255,0.2); background: rgba(255, 255, 255, 0.95); font-size: 14px; width: 100%; box-sizing: border-box; outline: none; transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1); color: #1e293b; font-weight: 500; box-shadow: 0 2px 6px rgba(0,0,0,0.06);"
@@ -286,31 +285,117 @@
     <div id="searchDropdown" style="display: none; opacity: 0; position: absolute; top: calc(100% + 8px); left: 0; width: 100%; background: #ffffff; border-radius: 12px; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.15), 0 8px 10px -6px rgba(0,0,0,0.15); border: 1px solid rgba(0,0,0,0.05); overflow: hidden; transition: opacity 0.15s ease; transform-origin: top center;"></div>
   </div>
 
-  <!-- Navigation Action Buttons -->
+  <!-- 2. Micro-Animated Header Action Buttons -->
   <div style="display: flex; gap: 28px; align-items: center; flex-wrap: wrap;">
-    <button onclick="openGame('https://forms.gle/gE2ayi2BfF9XTQdM6', 'Google Docs')" 
+    <button onclick="playSatisfyingClick(); openGame('https://forms.gle/gE2ayi2BfF9XTQdM6', 'Google Docs')" 
             style="background: none; border: none; color: rgba(255,255,255,0.9); font-size: 16px; font-weight: 600; cursor: pointer; padding: 6px 0; font-family: inherit; white-space: nowrap; transition: all 0.2s ease; border-bottom: 2px solid transparent;"
             onmouseenter="this.style.color='#ffffff'; this.style.borderBottomColor='#ffffff';"
-            onmouseleave="this.style.color='rgba(255,255,255,0.9)'; this.style.borderBottomColor='transparent';">
+            onmouseleave="this.style.color='rgba(255,255,255,0.9)'; this.style.borderBottomColor='transparent';"
+            onmousedown="this.style.transform='translateY(0.5px)';"
+            onmouseup="this.style.transform='translateY(0)';">
       Report Problem/Game Suggestion
     </button>
 
-    <button onclick="openGame('PLACEHOLDER LINK', 'Google Docs')" 
+    <button onclick="playSatisfyingClick(); openGame('PLACEHOLDER LINK', 'Google Docs')" 
             style="background: none; border: none; color: rgba(255,255,255,0.9); font-size: 16px; font-weight: 600; cursor: pointer; padding: 6px 0; font-family: inherit; white-space: nowrap; transition: all 0.2s ease; border-bottom: 2px solid transparent;"
             onmouseenter="this.style.color='#ffffff'; this.style.borderBottomColor='#ffffff';"
-            onmouseleave="this.style.color='rgba(255,255,255,0.9)'; this.style.borderBottomColor='transparent';">
+            onmouseleave="this.style.color='rgba(255,255,255,0.9)'; this.style.borderBottomColor='transparent';"
+            onmousedown="this.style.transform='translateY(0.5px)';"
+            onmouseup="this.style.transform='translateY(0)';">
       Kahoot & Blooket Hacks
     </button>
   </div>
 </div>
 
-	<h4 class="mc-text">Lil Croak was here</h4>
+<!-- 3. Animated Galaxy Splash Text Layer -->
+<h4 class="mc-text">Lil Croak was here</h4>
 
-<!-- ========================================== -->
-<!-- 🛠️ FULLY AUTOMATED ZERO-MAINTENANCE ENGINE -->
-<!-- ========================================== -->
+<!-- 4. Embedded Galaxy Font Styling -->
+<style>
+@keyframes galaxyShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.mc-text {
+  font-family: "Pixelify Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  display: inline-block;
+  position: absolute;
+  left: 1070px;   /* Move horizontally */
+  top: 35px;      /* Move vertically */
+  white-space: nowrap;
+  transform: rotate(-15deg);
+  
+  /* Shifting Nebula Engine */
+  background: linear-gradient(
+    45deg, 
+    #ff007f, /* Nebula Pink */
+    #7928ca, /* Cosmic Purple */
+    #00dfd8, /* Galactic Teal */
+    #ff007f  /* Loops back cleanly */
+  );
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  
+  /* Dual filters keep the pixel-perfect dark outline and apply neon glow */
+  filter: drop-shadow(2px 2px 0px #000000) drop-shadow(0px 0px 6px rgba(121, 40, 202, 0.4)); 
+  animation: splash 1.2s infinite ease-in-out, galaxyShift 5s ease infinite;
+}
+</style>
+
+<!-- ========================================================== -->
+<!-- 🛠️ FULLY AUTOMATED ZERO-MAINTENANCE SCRIPTS & AUDIO ENGINE -->
+<!-- ========================================================== -->
 <script>
+let audioCtxInstance = null;
+
+function initAudioContext() {
+  if (!audioCtxInstance) {
+    audioCtxInstance = new (window.AudioContext || window.webkitAudioContext)();
+  }
+}
+
+function playSatisfyingClick() {
+  initAudioContext();
+  if (!audioCtxInstance) return;
+  
+  const mainOsc = audioCtxInstance.createOscillator();
+  const mechanicalSnap = audioCtxInstance.createOscillator();
+  const volumeGain = audioCtxInstance.createGain();
+  
+  // Base soft pop freq
+  mainOsc.type = 'sine';
+  mainOsc.frequency.setValueAtTime(550, audioCtxInstance.currentTime); 
+  mainOsc.frequency.exponentialRampToValueAtTime(130, audioCtxInstance.currentTime + 0.07);
+  
+  // Tactical switch crunch overlay
+  mechanicalSnap.type = 'triangle';
+  mechanicalSnap.frequency.setValueAtTime(1200, audioCtxInstance.currentTime);
+  mechanicalSnap.frequency.exponentialRampToValueAtTime(350, audioCtxInstance.currentTime + 0.02);
+  
+  // Safe volume dampening setup
+  volumeGain.gain.setValueAtTime(0.035, audioCtxInstance.currentTime); 
+  volumeGain.gain.exponentialRampToValueAtTime(0.0001, audioCtxInstance.currentTime + 0.07);
+  
+  mainOsc.connect(volumeGain);
+  mechanicalSnap.connect(volumeGain);
+  volumeGain.connect(audioCtxInstance.destination);
+  
+  mainOsc.start();
+  mechanicalSnap.start();
+  mainOsc.stop(audioCtxInstance.currentTime + 0.07);
+  mechanicalSnap.stop(audioCtxInstance.currentTime + 0.07);
+}
+
+// Smart Automated Search Core
 function filterTopGames() {
+  initAudioContext();
   const input = document.getElementById('gameSearch').value.toLowerCase().trim();
   const dropdown = document.getElementById('searchDropdown');
   
@@ -322,26 +407,22 @@ function filterTopGames() {
     return;
   }
   
-  // 1. Scrapes the entire live page for any playable game elements dynamically
+  // ⚡ Scrapes all matching elements containing execution logic
   const gameElements = Array.from(document.querySelectorAll('[onclick*="openGame"]'));
   const discoveredGames = [];
   
   gameElements.forEach(element => {
-    // Skip navigation links themselves so they don't appear inside search results
     if (element.tagName === 'BUTTON' && (element.innerText.includes('Report') || element.innerText.includes('Hacks'))) {
       return;
     }
     
-    // Clean up title text by stripping messy formatting and line breaks
     let gameName = element.innerText || element.textContent || "";
     gameName = gameName.replace(/\s+/g, ' ').trim();
     
-    // Regex safely extracts strings wrapped inside single OR double quotes
     const onclickAttr = element.getAttribute('onclick') || "";
     const extractedParams = onclickAttr.match(/openGame\s*\(\s*['"]([^'"]+)['"]\s*,\s*['"]([^'"]+)['"]/);
     
     if (gameName && extractedParams && extractedParams[1] && extractedParams[2]) {
-      // Prevent duplicates if elements overlap in layout
       if (!discoveredGames.some(g => g.name.toLowerCase() === gameName.toLowerCase())) {
         discoveredGames.push({
           name: gameName,
@@ -352,7 +433,6 @@ function filterTopGames() {
     }
   });
 
-  // 2. Filter list against user query and cap instantly at 3 entries
   const topMatches = discoveredGames
     .filter(game => game.name.toLowerCase().includes(input))
     .slice(0, 3);
@@ -363,7 +443,6 @@ function filterTopGames() {
     return;
   }
   
-  // 3. Render floating list item elements
   topMatches.forEach((game, index) => {
     const item = document.createElement('div');
     item.textContent = game.name;
@@ -373,7 +452,6 @@ function filterTopGames() {
       item.style.borderBottom = "1px solid #f1f5f9";
     }
     
-    // Premium hover feedback interactions
     item.onmouseenter = () => {
       item.style.background = "#f0f6ff";
       item.style.color = "#0062ff";
@@ -385,12 +463,10 @@ function filterTopGames() {
       item.style.paddingLeft = "18px";
     };
     
-    // Safe execution container injection trigger
     item.onclick = () => {
+      playSatisfyingClick();
       if (typeof openGame === "function") {
         openGame(game.url, game.title);
-      } else {
-        console.error("The openGame custom function execution context was missing.");
       }
       document.getElementById('gameSearch').value = game.name;
     };
@@ -402,7 +478,7 @@ function filterTopGames() {
   setTimeout(() => { dropdown.style.opacity = '1'; }, 10);
 }
 </script>
-<!-- ========================================== -->
+<!-- ========================================================== -->
 
 	
 </header>
