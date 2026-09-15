@@ -250,16 +250,24 @@
 	  <p class="rainbow-text-creator"></p>
   <input type="text" id="searchBar" placeholder="Search Games..." />
 
-  <div onclick="openGame('https://forms.gle/VZNButfiuHt6sDXt7', 'Google Docs')">
-    <h1 class="h3">Report Problem/Game Suggestion</h1> 
-  </div>
+<!-- START OF NEW NAVBAR STYLING -->
+<div style="display: flex; gap: 25px; align-items: center; padding: 10px 0; margin-bottom: 15px; flex-wrap: wrap;">
+  
+  <!-- Button 1: Report Problem -->
+  <button onclick="openGame('https://forms.gle', 'Google Docs')" 
+          style="background: none; border: none; color: white; font-size: 20px; font-weight: bold; cursor: pointer; padding: 0; font-family: sans-serif;">
+    Report Problem/Game Suggestion
+  </button>
 
-	
+  <!-- Button 2: Hacks Section -->
+  <button onclick="openGame('PLACEHOLDER LINK', 'Google Docs')" 
+          style="background: none; border: none; color: white; font-size: 24px; font-weight: bold; cursor: pointer; padding: 0; font-family: sans-serif;">
+    Kahoot & Blooket Hacks
+  </button>
 
-  <div button="openGame('PLACEHOLDER LINK', 'Google Docs')">
-    <h1 class="h2">Kahoot & Blooket Hacks</h1>
-  </div>
-	
+</div>
+<!-- END OF NEW NAVBAR STYLING -->
+
     <h4 class="mc-text">Lil Croak was here</h4>
 	
 </header>
